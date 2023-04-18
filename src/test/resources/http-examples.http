@@ -1,0 +1,79 @@
+### Task 1C: get a list of product
+GET http://localhost:8082/products
+
+### Task 1D: get product information for bread
+GET http://localhost:8082/products?id=798bfd69-ab23-4d0e-9766-bb2f5c4c7d05
+
+### Task 2A: Order milk
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "d9f6241b-4fb2-4e35-afcc-5d1f7dd23e11",
+      "quantity": 1
+    }
+  ]
+}
+
+
+### Task 2B: Order bread, it is out of stock
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "798bfd69-ab23-4d0e-9766-bb2f5c4c7d05",
+      "quantity": 1
+    }
+  ]
+}
+
+### Task 2B: Empty order
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{
+  "items": []
+}
+
+### Task 2B: Negative quantity
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "798bfd69-ab23-4d0e-9766-bb2f5c4c7d05",
+      "quantity": -1
+    }
+  ]
+}
+
+### Task 2B: Not found product
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "not-found-uuid",
+      "quantity": 10
+    }
+  ]
+}
+
+### Task 3: Order more chicken than there is stock
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "a49a16f9-c057-4376-9cf8-1aa06d745c09",
+      "quantity": 10
+    }
+  ]
+}
