@@ -16,7 +16,6 @@ class ExceptionHandlerController : ResponseEntityExceptionHandler() {
 
 }
 
-// TODO give the exception a nice message
 class ProductNotFoundException(id: UUID): Exception("No Product found with id: $id") {
 
 }
