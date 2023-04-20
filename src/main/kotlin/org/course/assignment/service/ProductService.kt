@@ -1,5 +1,6 @@
 package org.course.assignment.service
 
+import org.course.assignment.controller.ProductNotFoundException
 import org.course.assignment.model.Product
 import org.course.assignment.repository.ProductRepository
 import org.springframework.data.repository.findByIdOrNull
@@ -11,8 +12,9 @@ import java.util.*
 
 @Component
 class ProductService(private val repository: ProductRepository) {
-    fun getProductById(id: UUID): Product? {
-        return repository.findByIdOrNull(id)
+    fun getProductById(id: UUID): Product {
+        return repository.findByIdOrNull(id) ?: throw ProductNotFoundException(id)
+
     }
     fun getAllProduct(): List<Product>{
         return repository.findAll()
