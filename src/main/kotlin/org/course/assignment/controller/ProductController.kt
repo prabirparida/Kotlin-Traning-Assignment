@@ -14,7 +14,6 @@ class ProductController(val productService: ProductService) {
         @RequestParam id: UUID
     ): Product { return productService.getProductById(id)
 
-        //?:  "No Product found with id: $id"
     }
 
     @GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
