@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e73d92f-469a-432c-b301-d268e117cb06" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/course/assignment/repository/OrderRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/course/assignment/repository/OrderRepository.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
